@@ -126,6 +126,9 @@ function pack(arg) {
   if (arg === undefined) arg = null;
 
   // json
+  // @TODO: make this Promise Friendly and replace with 
+  // BFJ.stringify().then().catch();
+  // see: https://www.npmjs.com/package/bfj
   return Buffer.from('j:' + JSON.stringify(arg));
 }
 
@@ -139,6 +142,9 @@ function pack(arg) {
 
 function unpack(arg) {
   // json
+    // @TODO: make this Promise Friendly and replace with 
+  // BFJ.parse().then().catch();
+  // see: https://www.npmjs.com/package/bfj
   if (isJSON(arg)) return JSON.parse(arg.slice(2));
 
   // string

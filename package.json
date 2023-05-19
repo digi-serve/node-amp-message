@@ -12,7 +12,8 @@
     "zeromq"
   ],
   "dependencies": {
-    "amp": "0.3.1"
+    "amp": "0.3.1",
+    "bfj": "^7.0.2"
   },
   "files": [
     "index.js"
